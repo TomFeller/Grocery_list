@@ -1,0 +1,44 @@
+@import "./src/style/variables";
+
+.app-navigation {
+  width: 70px;
+  transition: width .3s;
+  overflow: hidden;
+  &.open {
+    width: 200px;
+  }
+}
+
+.app-navigation-list {
+  padding-left: 0;
+}
+
+.app-navigation-item {
+  list-style: none;
+  padding: 10px 24px;
+  cursor: pointer;
+  position: relative;
+white-space: nowrap;
+  height: 41px;
+  &.active {
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 8px;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      background-color: $color-green;
+    }
+    a {
+      color: $color-green;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+}

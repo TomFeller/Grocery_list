@@ -1,0 +1,20 @@
+@import "variables";
+
+
+
+.page-title {
+  font-size: $font-1;
+  color:#fff;
+}
+.sub-title {
+  font-size: $font-2;
+  color: $color-green;
+  text-align: center;
+  font-weight: normal;
+}
+
+
+.box {
+  border: $box-border;
+  background-color: $box-background;
+}

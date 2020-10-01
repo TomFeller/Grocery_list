@@ -1,0 +1,58 @@
+export const fruits = [{
+    id: 0,
+    name: "Apple",
+    price: 5
+}, {
+    id: 1,
+    name: "Grapes",
+    price: 15
+}, {
+    id: 2,
+    name: "Tomato",
+    price: 22
+}, {
+    id: 3,
+    name: "Lemon",
+    price: 12
+}, {
+    id: 4,
+    name: "Pear",
+    price: 8
+}, {
+    id: 5,
+    name: "Banana",
+    price: 2
+}, {
+    id: 6,
+    name: "Cucumber",
+    price: 13
+}, {
+    id: 7,
+    name: "Pepper",
+    price: 10
+}, {
+    id: 8,
+    name: "Orange",
+    price: 7
+}, {
+    id: 9,
+    name: "Eggplant",
+    price: 25
+}, {
+    id: 10,
+    name: "Strawberry",
+    price: 16
+}, {
+    id: 11,
+    name: "Watermelon",
+    price: 98
+}, {
+    id: 12,
+    name: "Bread",
+    price: 10
+}, {
+    id: 14,
+    name: "Milk",
+    price: 7
+}];
+

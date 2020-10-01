@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+
+import {Provider} from 'react-redux';
+import {createStore, applyMiddleware, combineReducers} from 'redux';
+import ReduxThunk from 'redux-thunk';
+
+import './style/app.scss';
+import {BrowserRouter as Router} from "react-router-dom";
+import {AppHeader} from "./components/header/app-header";
+import {AppNavigation} from "./components/navigation/app-navigation";
+import {AppContent} from "./components/app-content/app-content";
+import {cartReducer} from "./store/reducers/cart-reducer";
+import {ordersReducer} from "./store/reducers/orders-reducer";
+
+
+const rootReducer = combineReducers({
+    orders: ordersReducer,
+    cart: cartReducer
+});
+const store = createStore(rootReducer, applyMiddleware(ReduxThunk));
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [isNavOpen, setIsNavOpen] = useState(true);
+    return (
+        <Provider store={store}>
+            <Router>
+                <div className={"app"}>
+                    <AppHeader toggleNavigation={() => setIsNavOpen(!isNavOpen)}/>
+                    <div className={"app-wrapper"}>
+                        <AppNavigation isNavOpen={isNavOpen}/>
+                        <AppContent/>
+                    </div>
+                </div>
+            </Router>
+        </Provider>
+    );
 }
 
 export default App;

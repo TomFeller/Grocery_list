@@ -36,6 +36,7 @@ export const Button = styled.button`
     font-size: 14px;
     cursor: pointer;
     outline: 0;
+    margin-bottom: 20px;
     a {
         color: inherit;
         text-decoration: none;

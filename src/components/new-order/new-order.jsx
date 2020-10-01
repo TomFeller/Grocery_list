@@ -50,8 +50,9 @@ export const NewOrder = (props) => {
                     <Box width={443} className="new-order-cart">
                         <SectionTitle>Cart</SectionTitle>
 
+                        <div className={"cart-list-wrapper"}>
                         {cartList}
-
+                        </div>
                         {cart.length > 0 &&
                         <>
                             <hr/>
